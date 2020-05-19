@@ -27,7 +27,7 @@ public class Alarm extends BroadcastReceiver {
         AlarmManager alarmManager=(AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         Intent intent=new Intent(context, Alarm.class);
         PendingIntent pendingIntent=PendingIntent.getBroadcast(context,0,intent,0);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 1000*60*10,pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 1000*60,pendingIntent);
     }
 
     public void cancelAlarm(Context context){
